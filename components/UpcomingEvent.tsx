@@ -114,39 +114,38 @@ export function UpcomingEvent() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <GlassCard variant="hero" className="overflow-hidden p-0 sm:p-0" hover={false}>
-                <div className="grid lg:grid-cols-2 gap-0">
-                  {/* Event Details (Left Side) */}
-                  <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                    <h3 className="font-cursive text-4xl sm:text-5xl lg:text-6xl text-brand-orange mb-6">
-                      {event.name}
-                    </h3>
+              <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                {/* Event Details (Left Side) */}
+                <div className="flex flex-col justify-center order-2 lg:order-1 mt-4 lg:mt-0">
+                  <h3 className="font-cursive text-3xl sm:text-5xl lg:text-6xl text-brand-orange mb-4 sm:mb-6 leading-tight">
+                    {event.name}
+                  </h3>
 
                     <div className="space-y-4 mb-8">
                       <div className="flex items-center gap-3 text-text-secondary">
-                        <span className="text-2xl">📍</span>
-                        <span className="font-cursive text-2xl sm:text-3xl">{event.venue}</span>
+                        <span className="text-xl sm:text-2xl grayscale brightness-0">📍</span>
+                        <span className="font-cursive text-xl sm:text-3xl">{event.venue}</span>
                       </div>
                       <div className="flex items-center gap-3 text-text-secondary">
-                        <span className="text-2xl">📅</span>
-                        <span className="font-cursive text-2xl sm:text-3xl">{dateDisplay}</span>
+                        <span className="text-xl sm:text-2xl grayscale brightness-0">📅</span>
+                        <span className="font-cursive text-xl sm:text-3xl">{dateDisplay}</span>
                       </div>
                       {event.time && (
                         <div className="flex items-center gap-3 text-text-secondary">
-                          <span className="text-2xl">⏰</span>
-                          <span className="font-cursive text-2xl sm:text-3xl">{event.time}</span>
+                          <span className="text-xl sm:text-2xl grayscale brightness-0">⏰</span>
+                          <span className="font-cursive text-xl sm:text-3xl">{event.time}</span>
                         </div>
                       )}
                       {event.duration_days && event.duration_days > 1 && (
                         <div className="flex items-center gap-3 text-text-secondary">
-                          <span className="text-2xl">⏳</span>
+                          <span className="text-xl sm:text-2xl grayscale brightness-0">⏳</span>
                           <span className="font-cursive text-2xl sm:text-3xl">{event.duration_days} Days Event</span>
                         </div>
                       )}
                     </div>
 
                     {event.description && (
-                      <p className="font-cursive text-text-secondary text-2xl sm:text-3xl leading-relaxed mb-10">
+                      <p className="font-cursive text-text-secondary text-xl sm:text-3xl leading-relaxed mb-8 sm:mb-10">
                         {event.description}
                       </p>
                     )}
@@ -167,23 +166,23 @@ export function UpcomingEvent() {
                         {!showBookingOptions ? (
                           <button 
                             onClick={() => setShowBookingOptions(true)}
-                            className="inline-flex items-center justify-center px-8 py-4 bg-brand-orange hover:bg-brand-orange/90 text-white font-heading font-bold text-lg rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-brand-orange/25"
+                            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-brand-orange hover:bg-brand-orange/90 text-white font-heading font-bold text-base sm:text-lg rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-brand-orange/25 w-full sm:w-auto"
                           >
                             Book Your Stall Now
                           </button>
                         ) : (
-                          <div className="flex flex-col sm:flex-row gap-4">
+                          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                             <a 
                               href="https://www.facebook.com/profile.php?id=100064239546273" 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center px-6 py-3 bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-heading font-bold text-base rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#1877F2]/25"
+                              className="inline-flex items-center justify-center px-5 sm:px-6 py-3 bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-heading font-bold text-sm sm:text-base rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#1877F2]/25 w-full sm:w-auto"
                             >
                               Facebook Page
                             </a>
                             <a 
                               href="tel:+8801775016672" 
-                              className="inline-flex items-center justify-center px-6 py-3 bg-brand-orange hover:bg-brand-orange/90 text-white font-heading font-bold text-base rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-orange/25"
+                              className="inline-flex items-center justify-center px-5 sm:px-6 py-3 bg-brand-orange hover:bg-brand-orange/90 text-white font-heading font-bold text-sm sm:text-base rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-orange/25 w-full sm:w-auto"
                             >
                               Call +880 1775-016672
                             </a>
@@ -194,35 +193,37 @@ export function UpcomingEvent() {
                   </div>
 
                   {/* Event Image (Right Side) */}
-                  <div className="relative h-64 lg:h-full min-h-[300px] lg:min-h-[500px] bg-gradient-to-br from-brand-orange to-brand-gold overflow-hidden order-1 lg:order-2">
-                    {event.image_path ? (
-                      <Image
-                        src={event.image_path}
-                        alt={event.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        priority
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center text-white/80">
-                          <motion.div
-                            animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
-                            transition={{ duration: 4, repeat: Infinity }}
-                            className="text-8xl mb-4"
-                          >
-                            🎪
-                          </motion.div>
-                          <p className="font-heading text-2xl font-bold">Event Poster</p>
-                        </div>
+                  <div className="order-1 lg:order-2 flex items-center justify-center">
+                    <GlassCard variant="hero" className="overflow-hidden p-2 sm:p-2 w-full" hover={false}>
+                      <div className="w-full rounded-xl overflow-hidden bg-brand-cream/10 flex items-center justify-center">
+                        {event.image_path ? (
+                          <Image
+                            src={event.image_path}
+                            alt={event.name}
+                            width={1920}
+                            height={1080}
+                            className="w-full h-auto object-contain"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            priority
+                          />
+                        ) : (
+                          <div className="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-brand-orange to-brand-gold">
+                            <div className="text-center text-white/80">
+                              <motion.div
+                                animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
+                                transition={{ duration: 4, repeat: Infinity }}
+                                className="text-8xl mb-4"
+                              >
+                                🎪
+                              </motion.div>
+                              <p className="font-heading text-2xl font-bold">Event Poster</p>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                    )}
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/10" />
+                    </GlassCard>
                   </div>
                 </div>
-              </GlassCard>
             </motion.div>
           </>
         )}

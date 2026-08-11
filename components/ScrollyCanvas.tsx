@@ -17,7 +17,7 @@ const overlays: TextOverlay[] = [
   {
     text: (
       <>
-        <span className="font-cursive text-brand-orange font-normal">9 Years</span> of Exhibition Excellence
+        <span className="font-cursive !text-white font-normal">9 Years</span> of Exhibition Excellence
       </>
     ),
     subtext: "Transforming venues across Dhaka.",
@@ -29,7 +29,7 @@ const overlays: TextOverlay[] = [
   {
     text: (
       <>
-        <span className="font-cursive text-brand-orange font-normal">60+</span> Successful <span className="font-cursive text-brand-orange font-normal">Events</span>
+        <span className="font-cursive !text-white font-normal">60+</span> Successful <span className="font-cursive !text-white font-normal">Events</span>
       </>
     ),
     subtext: "Curating spaces. Amplifying footfall.",
@@ -41,7 +41,7 @@ const overlays: TextOverlay[] = [
   {
     text: (
       <>
-        We create the <span className="font-cursive text-brand-orange font-normal">hype.</span>
+        We create the <span className="font-cursive !text-white font-normal">hype.</span>
       </>
     ),
     subtext: "Our stallers make the profit.",
@@ -53,7 +53,7 @@ const overlays: TextOverlay[] = [
   {
     text: (
       <>
-        <span className="font-cursive text-brand-orange font-normal">Welcome</span> <span>to</span>
+        <span className="font-cursive !text-white font-normal">Welcome</span> <span>to</span>
       </>
     ),
     subtext: "Priyanka's Event",
@@ -139,13 +139,13 @@ function TextOverlayComponent({
   const sizeClasses = {
     normal: "text-3xl sm:text-4xl lg:text-5xl",
     large: "text-4xl sm:text-5xl lg:text-6xl",
-    massive: "text-5xl sm:text-7xl lg:text-9xl",
+    massive: "text-4xl sm:text-7xl lg:text-9xl",
   };
 
   const subtextSizes = {
     normal: "text-lg sm:text-xl lg:text-2xl",
     large: "text-xl sm:text-2xl lg:text-3xl",
-    massive: "text-3xl sm:text-4xl lg:text-6xl",
+    massive: "text-2xl sm:text-4xl lg:text-6xl",
   };
 
   return (
@@ -157,7 +157,7 @@ function TextOverlayComponent({
         transition: "none",
       }}
     >
-      <div className={`glass-hero rounded-2xl px-6 py-5 sm:px-10 sm:py-7 max-w-4xl ${size === "massive" ? "max-w-6xl" : ""}`}>
+      <div className={`glass-hero rounded-2xl px-4 py-4 sm:px-10 sm:py-7 max-w-4xl ${size === "massive" ? "max-w-6xl" : ""}`}>
         <h2
           className={`font-heading font-bold text-text-primary leading-tight ${sizeClasses[size || "normal"]}`}
         >
@@ -169,7 +169,7 @@ function TextOverlayComponent({
           >
             {size === "massive" ? (
               <div className="mt-6 flex justify-center">
-                <div className="relative w-72 h-32 sm:w-96 sm:h-40 md:w-[32rem] md:h-48">
+                <div className="relative w-64 h-28 sm:w-96 sm:h-40 md:w-[32rem] md:h-48">
                   <NextImage 
                     src="/logo.png" 
                     alt="Priyanka's Event Logo" 

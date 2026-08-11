@@ -84,22 +84,22 @@ export function About() {
               Our Ecosystem
             </span>
           </motion.div>
-          <div className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 mb-2">
-            <TextReveal text="The" as="h2" variant="char-stagger" className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-text-primary" />
-            <TextReveal text="Hype & Profit" as="span" variant="char-stagger" delay={0.2} className="text-5xl sm:text-6xl lg:text-7xl font-cursive font-normal text-brand-orange mt-2" />
-            <TextReveal text="Model" as="span" variant="char-stagger" delay={0.4} className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-text-primary" />
+          <div className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-4 mb-2">
+            <TextReveal text="The" as="h2" variant="char-stagger" className="text-3xl sm:text-5xl lg:text-6xl font-heading font-bold text-text-primary" />
+            <TextReveal text="Hype & Profit" as="span" variant="char-stagger" delay={0.2} className="text-4xl sm:text-6xl lg:text-7xl font-cursive font-normal text-brand-orange mt-2" />
+            <TextReveal text="Model" as="span" variant="char-stagger" delay={0.4} className="text-3xl sm:text-5xl lg:text-6xl font-heading font-bold text-text-primary" />
           </div>
           <TextReveal
             text="A proven ecosystem where events create hype, and entrepreneurs make profit."
             as="p"
             variant="fade-up"
             delay={0.3}
-            className="text-lg sm:text-xl text-text-secondary mt-6 max-w-3xl mx-auto"
+            className="text-base sm:text-xl text-text-secondary mt-4 sm:mt-6 max-w-3xl mx-auto px-4"
           />
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-8 mt-8 sm:mt-0 px-2 sm:px-0">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -134,12 +134,12 @@ export function About() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16 px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <p className="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-text-secondary max-w-2xl mx-auto">
             Over <span className="font-bold text-brand-orange">19 years</span>, we&apos;ve perfected
             this model — connecting <span className="font-bold text-brand-orange">venues, entrepreneurs,
             and audiences</span> into a single powerful experience.

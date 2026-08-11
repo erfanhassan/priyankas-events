@@ -70,7 +70,7 @@ function TunnelFrame({
 
   return (
     <motion.div
-      className="absolute top-1/2 left-1/2 w-[70vw] max-w-2xl h-[40vh] md:h-[60vh] flex items-center justify-center"
+      className="absolute top-1/2 left-1/2 w-[85vw] md:w-[70vw] max-w-2xl h-[50vh] md:h-[60vh] flex items-center justify-center"
       style={{
         x: `calc(-50% + ${item.xOffset}vw)`,
         y: `calc(-50% + ${item.yOffset}vh)`,
@@ -140,19 +140,19 @@ export function TunnelGallery() {
             120+ Events & Counting
           </span>
         </motion.div>
-        <div className="flex flex-wrap justify-center items-end gap-x-3 md:gap-x-4 mb-2">
+        <div className="flex flex-wrap justify-center items-end gap-x-2 md:gap-x-4 mb-2">
           <TextReveal
             text="Step Into Our"
             as="h2"
             variant="char-stagger"
-            className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white"
+            className="text-3xl sm:text-5xl lg:text-6xl font-heading font-bold text-white"
           />
           <TextReveal
             text="World"
             as="span"
             variant="char-stagger"
             delay={0.3}
-            className="text-5xl sm:text-6xl lg:text-7xl font-cursive font-normal text-brand-orange"
+            className="text-4xl sm:text-6xl lg:text-7xl font-cursive font-normal text-brand-orange"
           />
         </div>
         <TextReveal
@@ -160,7 +160,7 @@ export function TunnelGallery() {
           as="p"
           variant="fade-up"
           delay={0.3}
-          className="text-lg text-white/50 mt-4 max-w-2xl mx-auto"
+          className="text-base sm:text-lg text-white/50 mt-4 max-w-2xl mx-auto px-4"
         />
       </div>
 

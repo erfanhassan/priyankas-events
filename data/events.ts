@@ -19,7 +19,7 @@ export const staticEvents: EventRecord[] = [
     date: "2026-09-10T10:00",
     time: "10:00 AM to 10:00 PM",
     description: "",
-    image_path: "/uploads/event_1785491150557.jpeg",
+    image_path: "/uploads/poster.jpg",
     duration_days: 3,
     created_at: "2026-07-31T09:45:50",
     updated_at: "2026-07-31T09:45:50"

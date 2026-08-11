@@ -64,7 +64,7 @@ export function Navbar() {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="relative w-40 h-16 sm:w-48 sm:h-20 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-32 h-12 sm:w-40 sm:h-16 md:w-48 md:h-20 transition-transform duration-300 group-hover:scale-105">
               <Image 
                 src="/logo.png" 
                 alt="Priyanka's Event Logo" 
@@ -81,7 +81,7 @@ export function Navbar() {
               <MagneticButton key={link.label} strength={0.15} radius={100}>
                 <button
                   onClick={() => handleClick(link.href)}
-                  className="px-4 py-2 text-sm font-body font-medium text-text-secondary 
+                  className="px-4 py-2 text-base font-body font-medium text-black 
                            hover:text-brand-orange transition-colors duration-300 rounded-lg
                            hover:bg-brand-orange/5"
                 >
@@ -142,7 +142,7 @@ export function Navbar() {
               <motion.button
                 key={link.label}
                 onClick={() => handleClick(link.href)}
-                className="text-left px-4 py-3 text-base font-body font-medium text-text-secondary 
+                className="text-left px-4 py-3 text-lg font-body font-medium text-black 
                          hover:text-brand-orange hover:bg-brand-orange/5 rounded-xl transition-all"
                 initial={{ x: -20, opacity: 0 }}
                 animate={mobileOpen ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}

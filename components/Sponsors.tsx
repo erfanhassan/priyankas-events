@@ -17,11 +17,11 @@ const sponsors = [
 function SponsorLogo({ name, image }: { name: string; image: string }) {
   return (
     <div
-      className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 group cursor-pointer"
+      className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12 group cursor-pointer"
       data-cursor-hover
     >
       <div
-        className="w-40 h-24 sm:w-48 sm:h-28 lg:w-56 lg:h-32 flex items-center justify-center
+        className="w-32 h-20 sm:w-48 sm:h-28 lg:w-56 lg:h-32 flex items-center justify-center
                   transition-transform duration-500 group-hover:-translate-y-2"
       >
         <img 
@@ -61,7 +61,7 @@ export function Sponsors() {
             Trusted Partners
           </span>
         </motion.div>
-        <div className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 mb-2">
+        <div className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-4 mb-2">
           <TextReveal
             text="Powered"
             as="h2"
@@ -73,7 +73,7 @@ export function Sponsors() {
             as="span"
             variant="char-stagger"
             delay={0.2}
-            className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-text-primary mt-2"
+            className="text-2xl sm:text-4xl lg:text-5xl font-heading font-bold text-text-primary mt-1 sm:mt-2"
           />
         </div>
         <TextReveal
